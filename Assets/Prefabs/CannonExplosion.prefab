@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3152532582085302429}
   - component: {fileID: 3152532582085302428}
   - component: {fileID: 3152532582085302431}
+  - component: {fileID: 6802527831726487422}
   m_Layer: 0
   m_Name: CannonExplosion
   m_TagString: Untagged
@@ -4806,3 +4807,15 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &6802527831726487422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3152532582085302430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f667a75dd51b448aa6a45fea0d7147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
