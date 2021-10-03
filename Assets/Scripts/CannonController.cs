@@ -14,12 +14,6 @@ public class CannonController : MonoBehaviour
     public Camera camera;
     public float interactionDistance;
 
-    public GameObject cannonBall;
-    private Rigidbody cannonBallRB;
-    public Transform shotPosition;
-    public GameObject explosion;
-    public float firePower;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -48,20 +42,8 @@ public class CannonController : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(1))
-        {
-            FireCannon();
-        }
+        
     }
 
-    public void FireCannon()
-    {
-        shotPosition.rotation = transform.rotation;
-        shotPosition.position = transform.position;
-        firePower *= 1;
-        GameObject cannonBallCopy = Instantiate(cannonBall, shotPosition.position, shotPosition.rotation) as GameObject;
-        cannonBallRB = cannonBallCopy.GetComponent<Rigidbody>();
-        cannonBallRB.AddForce(transform.right * firePower);
-        Instantiate(explosion, shotPosition.position, shotPosition.rotation);
-    }
+    
 }

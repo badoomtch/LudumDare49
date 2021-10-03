@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class CannonFireScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameManager gameManager;
+    public GameObject cannon;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Player")
+        {
+            ReliableOnTriggerExit.NotifyTriggerEnter(other, gameObject, OnTriggerExit);
+            cannon.GetComponent<Fireable>().enabled = true;
+            Debug.Log("OnTriggerEnter");
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerExit(Collider other)
+    {   
+        if (other.tag == "Player")
+        {
+        ReliableOnTriggerExit.NotifyTriggerExit(other, gameObject);
+        cannon.GetComponent<Fireable>().enabled = false;
+        Debug.Log("OnTriggerExit");
+        }
     }
 }

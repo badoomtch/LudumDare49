@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Lavigne SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -509403857
   material: {fileID: 366863152075695784}
-  materialHashCode: 0
+  materialHashCode: -1412969297
   m_Version: 1.1.0
   m_SourceFontFileGUID: 22da5e80098c84749a7a772e6f37e888
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 22da5e80098c84749a7a772e6f37e888, type: 3}
@@ -2514,9 +2514,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0

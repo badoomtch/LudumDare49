@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public float EnemyNPCKilled;
     public float playerNPCKilled;
-    public float cannonBallsPickedUp;
+    public float cannonBallsPickedUp = 0;
     
     public TextMeshProUGUI enemyNPCKilledText;
     public TextMeshProUGUI playerNPCKilledText;
@@ -19,6 +20,9 @@ public class GameManager : MonoBehaviour
     public GameObject player;
 
     public string tipTextString;
+
+    public GameObject loseWindow;
+    public GameObject winWindow;
 
     // Start is called before the first frame update
     void Start()
@@ -46,21 +50,54 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        enemyNPCKilledText.text = "Enemy Citizens Left: " + (10f - EnemyNPCKilled).ToString();
-        playerNPCKilledText.text = "Your Citizens Left: " + (10f - playerNPCKilled).ToString();
-        cannonBallsPickedUpText.text = "Cannon Balls: " + cannonBallsPickedUp + "/ 15";
+        enemyNPCKilledText.text =  (10f - EnemyNPCKilled).ToString() + "/10";
+        playerNPCKilledText.text = (10f - playerNPCKilled).ToString() + "/10";
+        cannonBallsPickedUpText.text = cannonBallsPickedUp + "/ 15";
+        
+        if (EnemyNPCKilled <= 0)
+        {
+            //win
+        }
+        if (playerNPCKilled <= 0)
+        {
+            //win
+        }
     }
 
-    void PauseGame()
+    public void WinGame()
+    {
+        player.GetComponent<FirstPersonAIO>().ControllerPause();
+        winWindow.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void LoseGame()
+    {
+        player.GetComponent<FirstPersonAIO>().ControllerPause();
+        loseWindow.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void PauseGame()
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
         player.GetComponent<FirstPersonAIO>().ControllerPause();
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene("Castles");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

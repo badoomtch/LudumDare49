@@ -23,7 +23,7 @@ public class CannonBallPickup : MonoBehaviour
                 if (5 + gameManager.cannonBallsPickedUp <= 15 && Input.GetMouseButtonDown(0))
                 {
                     Debug.Log("Picking up 5 cannon balls");
-                    gameManager.cannonBallsPickedUp +=5f;
+                    gameManager.cannonBallsPickedUp += 5f;
                     hitInfo.transform.GetComponent<CannonBallSpawner>().grabCannonBalls();
                 }
             }
@@ -33,7 +33,7 @@ public class CannonBallPickup : MonoBehaviour
                 if (10 + gameManager.cannonBallsPickedUp <= 15 && Input.GetMouseButtonDown(0))
                 {
                     Debug.Log("Picking up 10 cannon balls");
-                    gameManager.cannonBallsPickedUp +=10f;
+                    gameManager.cannonBallsPickedUp += 10f;
                     hitInfo.transform.GetComponent<CannonBallSpawner>().grabCannonBalls();
                 }
             }
