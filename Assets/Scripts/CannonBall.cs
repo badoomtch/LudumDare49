@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class CannonBall : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.collider.tag == "Breakable")
+        //Check to see if the tag on the collider is equal to Enemy
+        if (other.tag == "Breakable")
         {
             Destroy(gameObject);
         }
