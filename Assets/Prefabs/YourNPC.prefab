@@ -595,6 +595,7 @@ GameObject:
   - component: {fileID: 1226636571460096151}
   - component: {fileID: 568351767}
   - component: {fileID: 568351768}
+  - component: {fileID: 4815202989291234005}
   m_Layer: 0
   m_Name: YourNPC
   m_TagString: Untagged
@@ -709,7 +710,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2159465064795784901}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
@@ -769,6 +770,19 @@ MonoBehaviour:
   speed: 4
   directionChangeInterval: 1
   maxHeadingChange: 30
+--- !u!114 &4815202989291234005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2159465064795784901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda6a755ca0b1b742a1303b8f526348a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
 --- !u!1 &8302762297503706924
 GameObject:
   m_ObjectHideFlags: 0

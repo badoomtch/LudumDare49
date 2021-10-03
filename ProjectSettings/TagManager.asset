@@ -7,6 +7,9 @@ TagManager:
   - Moveable
   - Cannon
   - Breakable
+  - Lava
+  - Cannon10
+  - Cannon5
   layers:
   - Default
   - TransparentFX

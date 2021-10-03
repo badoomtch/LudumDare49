@@ -23,7 +23,7 @@ public class Breakable : MonoBehaviour
         //Check to see if the tag on the collider is equal to Enemy
         if (other.tag == "Moveable")
         {
-            Debug.Log("Hit by cannon");
+            //Debug.Log("Hit by cannon");
             Destroy(gameObject);
             Instantiate(cannonBallExplosion, transform.position, transform.rotation);
         }
