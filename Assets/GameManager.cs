@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
             if (pauseMenu.activeSelf)
             {
                 ResumeGame();
-                player.GetComponent<FirstPersonAIO>().ControllerPause();
+                //player.GetComponent<FirstPersonAIO>().ControllerPause();
             }
             else
             {
